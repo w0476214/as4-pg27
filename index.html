@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Three in a Row Puzzle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #theGame {
+            text-align: center;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        table {
+            margin-bottom: 10px;
+            border-collapse: collapse;
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cell.error {
+            background-color: #ffcccc;
+        }
+
+        .highlight {
+            outline: 3px solid #ffa500;
+            outline-offset: -1px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #statusMessage {
+            margin: 10px;
+            font-size: 1.2em;
+        }
+
+        #errorCheckbox {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        label[for='errorCheckbox'] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="theGame"></div>
+    <script src="game.js"></script>
+</body>
+</html>
